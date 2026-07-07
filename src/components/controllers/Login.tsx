@@ -1,14 +1,7 @@
 import React from "react";
 import loginUser from "../../hooks/auth/login";
 import type { Login as LoginCredentials } from "../../interfaces/auth";
-
-interface LoginLogicProps {
-  children: (props: {
-    onSubmit: (data: LoginCredentials) => void;
-    isLoading: boolean;
-    errorMessage?: string;
-  }) => React.ReactElement;
-}
+import type { LoginLogicProps } from "../../interfaces/auth";
 
 const LoginLogic: React.FC<LoginLogicProps> = ({ children }) => {
   const loginMutation = loginUser();

@@ -135,8 +135,6 @@ export const FormField = React.forwardRef<any, Field>(({
   );
 });
 
-FormField.displayName = "FormField";
-
 const GenericForm: React.FC<GenericFormProps> = ({
   fields,
   onSubmit,
