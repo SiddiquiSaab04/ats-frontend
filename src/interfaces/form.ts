@@ -17,7 +17,7 @@ export type InputType =
   | "file";
 
 export interface SelectOption {
-  label: string;
+  label?: string;
   value: string | number;
 }
 

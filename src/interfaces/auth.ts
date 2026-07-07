@@ -10,3 +10,18 @@ export interface LoginLogicProps {
     errorMessage?: string;
   }) => React.ReactElement;
 }
+
+export interface Signup {
+  name: string;
+  email: string;
+  password: string;
+  role: string;
+}
+
+export interface SignupLogicProps {
+  children: (props: {
+    onSubmit: (data: Signup) => void;
+    isLoading: boolean;
+    errorMessage?: string;
+  }) => React.ReactElement;
+}
