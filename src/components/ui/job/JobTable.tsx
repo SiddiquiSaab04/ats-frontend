@@ -22,7 +22,7 @@ const JobPage: React.FC = () => {
                 },
                 {
                     name: "Company",
-                    selector: (row: Job) => row.company.name,
+                    selector: (row: Job) => row.company?.name ?? "N/A",
                 },
                 {
                     name: "Job Type",

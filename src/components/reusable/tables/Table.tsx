@@ -18,25 +18,32 @@ export default function Table(props: TableProps) {
             style: {
                 minWidth: '100%',
                 borderBottom: "0 !important",
+                backdropFilter: "blur(10px)",
+                backgroundColor: "transparent",
 
             },
         },
         header: {
             style: {
                 padding: "16px",
-                backgroundColor: "#BED0F9",
+                backgroundColor: "transparent",
                 borderBottom: "none",
+                backdropFilter: "blur(10px)",
+                color: "#18191D",
 
             }
         },
         rows: {
             style: {
                 padding: "16px",
-                height: "100px",
+                height: "50px",
                 overflow: "hidden",
                 minHeight: '48px',
                 cursor: "pointer",
+                backgroundColor:"transparent",
                 borderBottom: "0 !important",
+                color: "#18191D",
+
             },
         },
         headRow: {
@@ -45,13 +52,18 @@ export default function Table(props: TableProps) {
                 '&:not(:last-of-type)': {
                     borderBottom: 'none',
                 },
+                backgroundColor: "transparent",
+                backdropFilter: "blur(10px)",
+                color: "#18191D",
+
             },
         },
         headCells: {
             style: {
                 padding: "16px",
-                backgroundColor: "#BED0F9",
-                color: "#070A0F",
+                backgroundColor: "transparent",
+                backdropFilter: "blur(10px)",
+                color: "#18191D",
                 fontSize: "16px",
                 fontWeight: "400",
                 lineHeight: "24px",
@@ -63,15 +75,17 @@ export default function Table(props: TableProps) {
             style: {
                 padding: "16px",
                 fontSize: "14px",
-                fontWeight: "300",
+                fontWeight: "400",
                 lineHeight: "20px",
-                color: "#334155",
-                borderBottom: "0 !important",
+                color: "#18191D",
+                borderBottom: "1px solid #cccbcbff !important",
             },
         },
         pagination: {
             style: {
                 borderTop: "0 !important",
+                backdropFilter: "blur(10px)",
+                backgroundColor: "transparent",
             },
         },
 
