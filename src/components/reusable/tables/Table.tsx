@@ -1,5 +1,5 @@
 import DataTableImport from 'react-data-table-component';
-import type { TableProps } from '../../interfaces/table';
+import type { TableProps } from '../../../interfaces/table';
 
 // Handle potential ESM/CJS interop issues with DataTable
 const DataTable = (DataTableImport as any).default || DataTableImport;

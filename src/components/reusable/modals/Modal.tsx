@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { X } from "lucide-react";
-import type { ModalProps } from "../../interfaces/modal";
+import type { ModalProps } from "../../../interfaces/modal";
 
 const Modal: React.FC<ModalProps> = ({
   isOpen,

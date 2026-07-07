@@ -1,4 +1,4 @@
-import type { CardProps } from '../../interfaces/card'
+import type { CardProps } from '../../../interfaces/card'
 
 const Card: React.FC<CardProps> = ({ children, styleClass, icon }) => {
   return (

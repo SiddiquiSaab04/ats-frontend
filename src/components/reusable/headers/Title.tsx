@@ -1,4 +1,4 @@
-import type { HeaderProps } from '../../interfaces/header'
+import type { HeaderProps } from '../../../interfaces/header'
 
 const Title: React.FC<HeaderProps> = ({ heading, description, headingStyle, descriptionStyle, styleClass, icon, iconStyle }) => {
     return (

@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import { Toaster } from "../notifications/Notification";
+import { Toaster } from "../reusable/notifications/Notification";
 
 const Layout: React.FC = () => {
 
