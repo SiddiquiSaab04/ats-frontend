@@ -8,7 +8,7 @@ const loginUser = () => {
     return useMutation({
         mutationFn: (data: Login) => login(data),
         onSuccess: (data) => {
-            localStorage.setItem("authToken", data.token);
+            localStorage.setItem("token", data.token);
             navigate("/dashboard");
         }
     });
