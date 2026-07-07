@@ -1,5 +1,5 @@
 import React from "react";
-import useSignup from "../../../hooks/auth/signup";
+import { useSignup } from "../../../hooks/auth/auth";
 import type { SignupLogicProps, Signup as SignupCredentials } from "../../../interfaces/auth";
 
 const SignupLogic: React.FC<SignupLogicProps> = ({ children }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import loginUser from "../../../hooks/auth/login";
+import {loginUser} from "../../../hooks/auth/auth";
 import type { Login as LoginCredentials, LoginLogicProps } from "../../../interfaces/auth";
 
 const LoginLogic: React.FC<LoginLogicProps> = ({ children }) => {

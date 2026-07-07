@@ -7,4 +7,5 @@ export interface TableProps {
   onRowClicked?: (row: any) => void;
   showTableHead?: boolean;
   progressPending?: boolean;
+  loading:boolean
 }

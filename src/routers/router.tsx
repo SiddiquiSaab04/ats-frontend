@@ -4,6 +4,7 @@ import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import ProtectedRoutes from "./protectedRoutes";
 import Signup from "../pages/Signup";
+import Job from "../pages/Job";
 
 const Router = createBrowserRouter([
   
@@ -13,6 +14,7 @@ const Router = createBrowserRouter([
     children: [
       { index: true, element: <Dashboard /> },
       { path: "dashboard", element: <Dashboard /> },
+      { path: "jobs", element: <Job /> },
     ],
   },
   {
@@ -22,7 +24,7 @@ const Router = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
-  }
+  },
 ]);
 
 export default Router;

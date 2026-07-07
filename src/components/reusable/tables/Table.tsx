@@ -5,7 +5,7 @@ import type { TableProps } from '../../../interfaces/table';
 const DataTable = (DataTableImport as any).default || DataTableImport;
 
 export default function Table(props: TableProps) {
-    const { columns, data, actions, className, showTableHead, onRowClicked, progressPending } = props;
+    const { columns, data, actions, className, showTableHead, onRowClicked, progressPending , loading } = props;
 
     const resolvedNoTableHead =
         typeof showTableHead === "boolean"
@@ -90,6 +90,7 @@ export default function Table(props: TableProps) {
                 noTableHead={resolvedNoTableHead}
                 onRowClicked={onRowClicked}
                 progressPending={progressPending}
+                loading={loading}
             />
         </div>
     );
