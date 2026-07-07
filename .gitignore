@@ -1,0 +1,10 @@
+# Node dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
