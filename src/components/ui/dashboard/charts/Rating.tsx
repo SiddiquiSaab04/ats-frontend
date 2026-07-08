@@ -30,8 +30,8 @@ export default function Rating({
       ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-transparent rounded-xl shadow-md border border-gray-100  h-[380px]">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-zinc-100 mb-2">
+    <div className="flex flex-col items-center justify-center p-6 bg-white/30 rounded-xl shadow-md border border-indigo-300  h-[380px]">
+      <h3 className="text-lg font-semibold text-indigo-700 dark:text-lavender mb-2">
         Applications Performance
       </h3>
       
@@ -53,8 +53,8 @@ export default function Rating({
                   <stop offset="100%" stopColor="#10b981" stopOpacity={1} />
                 </radialGradient>
                 <radialGradient id="colorEmptyGrad" cx="50%" cy="50%" r="80%">
-                  <stop offset="0%" stopColor="#e4e4e7" stopOpacity={0.5} />
-                  <stop offset="100%" stopColor="#d4d4d8" stopOpacity={1} />
+                  <stop offset="0%" stopColor="#4f46e5" stopOpacity={0.5} />
+                  <stop offset="100%" stopColor="#4f46e5" stopOpacity={1} />
                 </radialGradient>
               </defs>
               <Pie
@@ -93,10 +93,10 @@ export default function Rating({
 
           {/* Centered label inside the donut chart */}
           <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-            <span className="text-3xl font-extrabold text-gray-800 dark:text-zinc-100">
+            <span className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-300">
               {hasData ? `${successRate}%` : "0%"}
             </span>
-            <span className="text-xs text-gray-500 dark:text-zinc-400 font-medium uppercase tracking-wider mt-0.5">
+            <span className="text-xs text-indigo-500 dark:text-indigo-300 font-medium uppercase tracking-wider mt-0.5">
               Success Rate
             </span>
           </div>

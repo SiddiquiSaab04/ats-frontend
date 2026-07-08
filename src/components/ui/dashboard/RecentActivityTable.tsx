@@ -64,12 +64,12 @@ const RecentActivity: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col p-6 bg-transparent rounded-xl shadow-md border border-gray-100 dark:border-zinc-800">
+    <div className="flex flex-col p-6 bg-white/30 rounded-xl border border-indigo-300">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-zinc-100">
+        <h3 className="text-lg font-semibold text-indigo-700 dark:text-lavender">
           Recent Activities
         </h3>
-        <span className="text-xs text-gray-500 bg-gray-100 dark:bg-zinc-800 px-2.5 py-1 rounded-full font-medium">
+        <span className="text-xs text-indigo-500 bg-lavender/30 dark:bg-lavender/30 px-2.5 py-1 rounded-full font-medium">
           {activities.length} total
         </span>
       </div>

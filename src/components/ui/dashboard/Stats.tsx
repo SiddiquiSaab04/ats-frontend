@@ -51,12 +51,17 @@ const StatsCard: React.FC = () => {
                         icon:<UserXIcon size={20} strokeWidth="1.5" />
                     },
                 ].map((item) => (
-                    <Card key={item.title} styleClass="bg-primary text-white p-5 rounded-lg shadow-lg" >
+                    <Card key={item.title} styleClass="bg-white/30 text-indigo-700 p-5 rounded-lg shadow-xl hover:bg-lavender/30 hover:border hover:border-indigo-700" >
                         <div className="flex justify-between items-end">
-                            <h2 className="text-2xl font-bold text-white">{item.value}</h2>
-                            {item.icon}
+                            <div>
+                                <h2 className="text-2xl font-bold text-indigo-700">{item.value}</h2>
+                                <p className="text-sm text-gray-700">{item.title}</p>
+                            </div>
+                           <div className="p-3 rounded-full bg-lavender/30">
+                             {item.icon}
+                           </div>
                         </div>
-                        <p className="text-sm text-gray-300">{item.title}</p>
+                        
                         
                     </Card>
                 ))}

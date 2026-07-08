@@ -22,8 +22,8 @@ const MonthlyApplications = () => {
     })) ?? [];
 
   return (
-    <div className="flex flex-col p-6 bg-transparent rounded-xl shadow-md border border-gray-100 h-[380px]">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-zinc-100 mb-4">
+    <div className="flex flex-col p-6 bg-white/30 rounded-xl shadow-md border border-indigo-300 h-[380px]">
+      <h3 className="text-lg font-semibold text-indigo-700 dark:text-lavender mb-4">
         Monthly Applications
       </h3>
 
@@ -49,7 +49,7 @@ const MonthlyApplications = () => {
                   <stop offset="100%" stopColor="#818cf8" stopOpacity={0.2} />
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#A88AED" />
               <XAxis 
                 dataKey="name" 
                 tickLine={false} 
@@ -65,7 +65,7 @@ const MonthlyApplications = () => {
               <Tooltip 
                 contentStyle={{
                   backgroundColor: "rgba(255, 255, 255, 0.95)",
-                  border: "1px solid #e2e8f0",
+                  border: "1px solid #A88AED",
                   borderRadius: "8px",
                   boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
                 }}
@@ -77,6 +77,7 @@ const MonthlyApplications = () => {
                 dataKey="total"
                 name="Applications"
                 fill="url(#monthlyBarGrad)"
+                stroke="A88AED"
                 radius={[4, 4, 0, 0]}
                 barSize={30}
               />
@@ -88,7 +89,7 @@ const MonthlyApplications = () => {
                 name="Trend"
                 stroke="#10b981"
                 strokeWidth={3}
-                dot={{ r: 4, strokeWidth: 2, fill: "#ffffff" }}
+                dot={{ r: 4, strokeWidth: 2, fill: "#A88AED" }}
                 activeDot={{ r: 6 }}
               />
             </ComposedChart>

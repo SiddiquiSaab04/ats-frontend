@@ -10,7 +10,7 @@ const Layout: React.FC = () => {
         <div
             className="flex h-screen overflow-hidden"
             style={{
-                backgroundImage: "url('/dashboard-bg.png')",
+                backgroundImage: "url('/bg.jpg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
