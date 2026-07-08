@@ -1,11 +1,10 @@
 import DataTableImport from 'react-data-table-component';
 import type { TableProps } from '../../../interfaces/table';
 
-// Handle potential ESM/CJS interop issues with DataTable
 const DataTable = (DataTableImport as any).default || DataTableImport;
 
 export default function Table(props: TableProps) {
-    const { columns, data, actions, className, showTableHead, onRowClicked, progressPending , loading } = props;
+    const { columns, data, actions, className, showTableHead, onRowClicked, progressPending , loading , page , perPage , totalRows , onPageChange , onPerPageChange } = props;
 
     const resolvedNoTableHead =
         typeof showTableHead === "boolean"
@@ -105,6 +104,12 @@ export default function Table(props: TableProps) {
                 onRowClicked={onRowClicked}
                 progressPending={progressPending}
                 loading={loading}
+                paginationServer
+                paginationTotalRows={totalRows}
+                paginationPerPage={perPage}
+                paginationDefaultPage={page}
+                onChangePage={onPageChange}
+                onChangeRowsPerPage={onPerPageChange}
             />
         </div>
     );

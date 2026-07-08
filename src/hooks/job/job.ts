@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAllJobs } from "../../api/jobs/jobs";
-import type { Job } from "../../interfaces/job";
+import type { JobPagination } from "../../interfaces/job";
 
-const useJobs = () => {
-    return useQuery<Job[]>({
-        queryKey: ["jobs"],
-        queryFn: getAllJobs,
+const useJobs = (search: string, page: number, limit: number) => {
+    return useQuery<JobPagination>({
+        queryKey: ["jobs", search, page, limit],
+        queryFn: () => getAllJobs(page, limit, search),
     });
 };
 
-export  {useJobs};
+export { useJobs };

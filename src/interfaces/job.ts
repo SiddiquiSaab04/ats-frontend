@@ -35,3 +35,15 @@ export interface Job {
   company: Company;
   skills: string[];
 }
+
+export interface JobPagination {
+  data: Job[];
+  pagination: {
+    page: number;
+    limit: number;
+    totalRecords: number;
+    totalPages: number;
+    hasPrevPage: boolean;
+    hasNextPage: boolean;
+  };
+}
