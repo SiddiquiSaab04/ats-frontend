@@ -1,38 +1,38 @@
 import React from "react";
-import { useJobs } from "../../../hooks/job/job";
-import type { Job } from "../../../interfaces/job";
+import { useApplications } from "../../../hooks/application/application";
+import type { Application } from "../../../interfaces/application";
 import Table from "../../reusable/tables/Table";
 import { usePagination } from "../../../hooks/pagination/pagination";
-const JobTable: React.FC = () => {
+const ApplicationTable: React.FC = () => {
     const pagination = usePagination()
-    const { data, isLoading } = useJobs(pagination.search, pagination.page, pagination.limit);
+    const { data, isLoading } = useApplications(pagination.search, pagination.page, pagination.limit);
     return (
         <Table
-            data={data?.data ?? []}
+            data={data?.applications ?? []}
             columns={[
                 {
                     name: "Title",
-                    selector: (row: Job) => row.title,
+                    selector: (row: Application) => row.userName,
                 },
                 {
                     name: "Location",
-                    selector: (row: Job) => row.location,
+                    selector: (row: Application) => row.location,
                 },
                 {
-                    name: "Salary",
-                    selector: (row: Job) => row.salary,
+                    name: "Email",
+                    selector: (row: Application) => row.email,
                 },
                 {
-                    name: "Company",
-                    selector: (row: Job) => row.company?.name ?? "N/A",
+                    name: "Phone",
+                    selector: (row: Application) => row.phone,
                 },
                 {
                     name: "Job Type",
-                    selector: (row: Job) => row.jobType,
+                    selector: (row: Application) => row.job.jobType,
                 },
                 {
                     name: "Status",
-                    selector: (row: Job) => row.status,
+                    selector: (row: Application) => row.status,
                 },
             ]}
             // actions={[
@@ -62,4 +62,4 @@ const JobTable: React.FC = () => {
     );
 };
 
-export default JobTable;
+export default ApplicationTable;
