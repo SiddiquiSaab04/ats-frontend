@@ -30,22 +30,22 @@ const ApplicationTable: React.FC = () => {
                     name: "Job Type",
                     selector: (row: Application) => row.job.jobType,
                     cell: (row: Application) => {
-                                                const statusColors: Record<string, string> = {
-                                                  FULL_TIME: "bg-green-500 text-green-50",
-                                                  PART_TIME: "bg-rose-500 text-rose-50",
-                                                  CONTRACT: "bg-rose-500 text-rose-50",
-                                                  INTERNSHIP: "bg-blue-500 text-blue-50",
-                                                  FREELANCE: "bg-blue-500 text-blue-50",
-                                                  HYBRID : "bg-lavender/30 text-indigo-700",
-                                                  REMOTE: "bg-teal-500 text-teal-50",
-                                                };
-                                                const colorClass = statusColors[row.job.jobType] || "bg-gray-100 text-gray-800";
-                                                return (
-                                                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider ${colorClass}`}>
-                                                    {row.job.jobType}
-                                                  </span>
-                                                );
-                                              },
+                        const statusColors: Record<string, string> = {
+                            FULL_TIME: "bg-green-500 text-green-50",
+                            PART_TIME: "bg-rose-500 text-rose-50",
+                            CONTRACT: "bg-rose-500 text-rose-50",
+                            INTERNSHIP: "bg-blue-500 text-blue-50",
+                            FREELANCE: "bg-blue-500 text-blue-50",
+                            HYBRID: "bg-lavender/30 text-indigo-700",
+                            REMOTE: "bg-teal-500 text-teal-50",
+                        };
+                        const colorClass = statusColors[row.job.jobType] || "bg-gray-100 text-gray-800";
+                        return (
+                            <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider ${colorClass}`}>
+                                {row.job.jobType}
+                            </span>
+                        );
+                    },
                 },
                 {
                     name: "Status",
@@ -100,4 +100,3 @@ const ApplicationTable: React.FC = () => {
 export default ApplicationTable;
 
 
-              

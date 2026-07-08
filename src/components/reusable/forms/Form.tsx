@@ -20,7 +20,7 @@ export const FormField = React.forwardRef<any, Field>(({
   } ${
     error
       ? "border-red-500 focus:border-red-500 focus:ring-red-500/10"
-      : "border-gray-200 hover:border-gray-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10"
+      : "border-gray-200 hover:border-gray-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10"
   } ${
     inputClassName || "bg-white border rounded-xl py-2.5"
   }`;
@@ -68,7 +68,7 @@ export const FormField = React.forwardRef<any, Field>(({
               type="checkbox"
               name={name}
               ref={ref as any}
-              className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors"
+              className="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-indigo-500 transition-colors"
               {...(props as any)}
             />
             <span className="text-sm text-gray-600">{props.placeholder}</span>
@@ -115,7 +115,7 @@ export const FormField = React.forwardRef<any, Field>(({
       )}
       <div className="relative group">
         {leftIcon && (
-          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-200 z-10">
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-indigo-500 transition-colors duration-200 z-10">
             {leftIcon}
           </div>
         )}
@@ -123,7 +123,7 @@ export const FormField = React.forwardRef<any, Field>(({
         {renderInput()}
 
         {rightIcon && type !== "select" && (
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-200 z-10">
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-indigo-500 transition-colors duration-200 z-10">
             {rightIcon}
           </div>
         )}
@@ -176,7 +176,7 @@ const GenericForm: React.FC<GenericFormProps> = ({
         type="submit"
         className={`mt-8 px-8 py-3.5 rounded-xl font-bold transition-all duration-200 ${
           submitButtonClassName ||
-          "bg-blue-600 text-white hover:bg-blue-700 active:scale-95 shadow-lg shadow-blue-500/25"
+          "bg-indigo-600 text-white hover:bg-indigo-700 active:scale-95 shadow-lg shadow-indigo-500/25"
         }`}
       >
         {submitLabel}

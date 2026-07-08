@@ -10,7 +10,7 @@ interface LoginProps {
 
 export const Login: React.FC<LoginProps> = ({ onSubmit, isLoading, errorMessage }) => {
   return (
-    <div className="min-h-screen flex bg-gray-50">
+    <div className="min-h-screen flex bg-lavender/30">
       {/* Left side: Premium Image/Visual Container */}
       <div className="hidden lg:flex lg:w-1/2 relative bg-slate-900 overflow-hidden items-center justify-center">
         {/* Subtle background glow effect */}
@@ -45,10 +45,10 @@ export const Login: React.FC<LoginProps> = ({ onSubmit, isLoading, errorMessage 
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 sm:p-12 md:p-16">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center lg:text-left space-y-2">
-            <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">
+            <h1 className="text-3xl font-extrabold text-indigo-700 tracking-tight">
               Welcome Back
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-indigo-700">
               Sign in to manage your pipeline and view candidate status.
             </p>
           </div>

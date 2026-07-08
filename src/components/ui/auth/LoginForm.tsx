@@ -24,7 +24,7 @@ interface LoginFormProps {
       type: "email",
       placeholder: "you@example.com",
       required: true,
-      leftIcon: <Mail size={18} className="text-gray-400 group-focus-within:text-blue-500 transition-colors" />,
+      leftIcon: <Mail size={18} className="text-gray-400 group-focus-within:text-indigo-700 transition-colors" />,
     },
     {
       name: "password",
@@ -32,8 +32,8 @@ interface LoginFormProps {
       type: showPassword ? "text" : "password",
       placeholder: "••••••••",
       required: true,
-      leftIcon: <Lock size={18} className="text-gray-400 group-focus-within:text-blue-500 transition-colors" />,
-      rightIcon: showPassword ? <Eye size={18}  onClick={togglePasswordVisibility}  className="text-gray-400 group-focus-within:text-blue-500 transition-colors cursor-pointer" /> : <EyeOff size={18}  onClick={togglePasswordVisibility}  className="text-gray-400 group-focus-within:text-blue-500 transition-colors cursor-pointer" />,
+      leftIcon: <Lock size={18} className="text-gray-400 group-focus-within:text-indigo-700 transition-colors" />,
+      rightIcon: showPassword ? <Eye size={18}  onClick={togglePasswordVisibility}  className="text-gray-400 group-focus-within:text-indigo-700 transition-colors cursor-pointer" /> : <EyeOff size={18}  onClick={togglePasswordVisibility}  className="text-gray-400 group-focus-within:text-indigo-700 transition-colors cursor-pointer" />,
     },
   ];
 
@@ -49,7 +49,7 @@ interface LoginFormProps {
         fields={fields}
         onSubmit={(data) => onSubmit(data as Login)}
         submitLabel={isLoading ? "Signing in..." : "Sign In"}
-        submitButtonClassName="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500/20 active:scale-[0.98] shadow-lg shadow-blue-500/10"
+        submitButtonClassName="w-full py-3.5 px-4 bg-lavender/30 hover:bg-lavender/70 text-indigo-700 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-lavender/70 active:scale-[0.98] shadow-lg shadow-indigo-500/10"
       />
     </div>
   );
