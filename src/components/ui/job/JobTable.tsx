@@ -12,7 +12,7 @@ const JobTable: React.FC = () => {
             columns={[
                 {
                     name: "Title",
-                    selector: (row: Job) => row.title,
+                    selector: (row: Job) => <span className="font-medium">{row.title}</span>,
                 },
                 {
                     name: "Location",
