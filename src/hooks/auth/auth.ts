@@ -1,16 +1,20 @@
-import { useMutation } from "@tanstack/react-query";
-import { login } from "../../api/auth/auth";
-import type { Login } from "../../interfaces/auth";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { login, signup, getCurrentUser } from "../../api/auth/auth";
+import type { Login, UserProfile } from "../../interfaces/auth";
 import { useNavigate } from "react-router-dom";
-import { signup } from "../../api/auth/auth";
 import type { Signup } from "../../interfaces/auth";
 
 const loginUser = () => {
     const navigate = useNavigate();
     return useMutation({
         mutationFn: (data: Login) => login(data),
-        onSuccess: (data) => {
-            localStorage.setItem("token", data.token);
+        onSuccess: (data: any) => {
+            const token = data?.token;
+            const name = data?.name;
+            const role = data?.role ;
+            localStorage.setItem("token", token);
+            localStorage.setItem("name", name);
+            localStorage.setItem("role", role);
             navigate("/dashboard");
         }
     });
@@ -26,4 +30,12 @@ const useSignup = () => {
   });
 };
 
-export  { useSignup, loginUser }
+const useCurrentUser = () => {
+  return useQuery<UserProfile>({
+    queryKey: ["currentUser"],
+    queryFn: () => getCurrentUser(),
+    enabled: !!localStorage.getItem("token"),
+  });
+};
+
+export  { useSignup, loginUser, useCurrentUser }

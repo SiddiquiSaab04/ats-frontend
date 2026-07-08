@@ -25,3 +25,12 @@ export interface SignupLogicProps {
     errorMessage?: string;
   }) => React.ReactElement;
 }
+
+export interface UserProfile {
+  id: number;
+  name: string;
+  email: string;
+  role: string;
+  createdAt: string;
+  updatedAt: string;
+}
