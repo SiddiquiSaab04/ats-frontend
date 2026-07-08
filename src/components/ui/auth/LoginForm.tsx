@@ -49,7 +49,7 @@ interface LoginFormProps {
         fields={fields}
         onSubmit={(data) => onSubmit(data as Login)}
         submitLabel={isLoading ? "Signing in..." : "Sign In"}
-        submitButtonClassName="w-full py-3.5 px-4 bg-lavender/30 hover:bg-lavender/70 text-indigo-700 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-lavender/70 active:scale-[0.98] shadow-lg shadow-indigo-500/10"
+        submitButtonClassName="w-full py-3.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-500/20 active:scale-[0.98] shadow-lg shadow-indigo-500/10"
       />
     </div>
   );

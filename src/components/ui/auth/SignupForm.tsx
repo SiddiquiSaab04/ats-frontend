@@ -25,7 +25,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSubmit, isLoading, errorMessa
       placeholder: "John Doe",
       required: true,
       leftIcon: (
-        <User size={18} className="text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+        <User size={18} className="text-gray-400 group-focus-within:text-indigo-700 transition-colors" />
       ),
     },
     {
@@ -35,7 +35,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSubmit, isLoading, errorMessa
       placeholder: "Enter your email address",
       required: true,
       leftIcon: (
-        <Mail size={18} className="text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+        <Mail size={18} className="text-gray-400 group-focus-within:text-indigo-700 transition-colors" />
       ),
     },
     {
@@ -45,19 +45,19 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSubmit, isLoading, errorMessa
       placeholder: "Enter your password",
       required: true,
       leftIcon: (
-        <Lock size={18} className="text-gray-400 group-focus-within:text-blue-500 transition-colors" />
+        <Lock size={18} className="text-gray-400 group-focus-within:text-indigo-700 transition-colors" />
       ),
       rightIcon: showPassword ? (
         <Eye
           size={18}
           onClick={togglePasswordVisibility}
-          className="text-gray-400 group-focus-within:text-blue-500 transition-colors cursor-pointer"
+          className="text-gray-400 group-focus-within:text-indigo-700 transition-colors cursor-pointer"
         />
       ) : (
         <EyeOff
           size={18}
           onClick={togglePasswordVisibility}
-          className="text-gray-400 group-focus-within:text-blue-500 transition-colors cursor-pointer"
+          className="text-gray-400 group-focus-within:text-indigo-700 transition-colors cursor-pointer"
         />
       ),
     },
@@ -86,7 +86,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onSubmit, isLoading, errorMessa
         fields={fields}
         onSubmit={(data) => onSubmit(data as Signup)}
         submitLabel={isLoading ? "Creating account..." : "Sign Up"}
-        submitButtonClassName="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500/20 active:scale-[0.98] shadow-lg shadow-blue-500/10"
+        submitButtonClassName="w-full py-3.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-500/20 active:scale-[0.98] shadow-lg shadow-indigo-500/10"
       />
     </div>
   );
