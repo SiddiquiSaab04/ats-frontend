@@ -14,7 +14,7 @@ const RecentActivity: React.FC = () => {
       selector: (row: recentActivity) => row.jobTitle,
       sortable: true,
       cell: (row: recentActivity) => (
-        <span className="font-semibold text-gray-800 dark:text-zinc-200">
+        <span className="font-semibold text-gray-800 dark:text-gray-800">
           {row.jobTitle}
         </span>
       ),
@@ -24,7 +24,7 @@ const RecentActivity: React.FC = () => {
       selector: (row: recentActivity) => row.companyName,
       sortable: true,
       cell: (row: recentActivity) => (
-        <span className="text-gray-600 dark:text-zinc-400">
+        <span className="text-gray-600 dark:text-gray-800">
           {row.companyName}
         </span>
       ),
@@ -34,7 +34,7 @@ const RecentActivity: React.FC = () => {
       selector: (row: recentActivity) => row.appliedAt,
       sortable: true,
       cell: (row: recentActivity) => (
-        <span className="text-gray-500 dark:text-zinc-400">
+        <span className="text-gray-500 dark:text-gray-800">
           {row.appliedAt}
         </span>
       ),
@@ -45,8 +45,8 @@ const RecentActivity: React.FC = () => {
       sortable: true,
       cell: (row: recentActivity) => {
         const statusColors: Record<string, string> = {
-          APPLIED: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
-          SHORTLISTED: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+          APPLIED: "bg-lavender/30 text-indigo-700",
+          SHORTLISTED: "bg-green-500 text-green-50",
           INTERVIEW: "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300",
           OFFERED: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
           ACCEPTED: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
