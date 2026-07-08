@@ -3,6 +3,7 @@ import Template from "../components/layouts/template/Template";
 import StatsCard from "../components/ui/dashboard/Stats";
 import MonthlyApplications from "../components/ui/dashboard/charts/MonthlyApplications";
 import Rating from "../components/ui/dashboard/charts/Rating";
+import RecentActivityTable from "../components/ui/dashboard/RecentActivityTable";
 
 const Dashboard: React.FC = () => {
   return (
@@ -17,6 +18,10 @@ const Dashboard: React.FC = () => {
         <div className="lg:col-span-2">
           <Rating />
         </div>
+      </div>
+
+      <div className="w-full">
+        <RecentActivityTable />
       </div>
     </Template>
   );
