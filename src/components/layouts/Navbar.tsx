@@ -1,21 +1,10 @@
 import React from "react";
 import { User } from "lucide-react";
-import { useCurrentUser } from "../../hooks/auth/auth";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store/store";
 
 const Navbar: React.FC = () => {
-  const { data: userProfile } = useCurrentUser();
-
-  let name = userProfile?.name ?? localStorage.getItem("name") ?? "User";
-  let role = userProfile?.role ?? localStorage.getItem("role") ?? "Candidate";
-
-  // Keep localStorage updated whenever fresh profile data is available
-  if (userProfile?.name) {
-    localStorage.setItem("name", userProfile.name);
-  }
-
-  if (userProfile?.role) {
-    localStorage.setItem("role", userProfile.role);
-  }
+  const { user } = useSelector((state: RootState) => state.auth);
 
   return (
     <div className="flex h-16 w-full items-center justify-between px-6 bg-white/20 border-b border-white/15 text-indigo-700 backdrop-blur-md">
@@ -31,11 +20,11 @@ const Navbar: React.FC = () => {
 
           <div className="flex flex-col text-left">
             <span className="text-sm font-semibold capitalize">
-              {name}
+              {user?.name || "User"}
             </span>
 
             <span className="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-indigo-500">
-              {role}
+              {user?.role || "--"}
             </span>
           </div>
         </div>
