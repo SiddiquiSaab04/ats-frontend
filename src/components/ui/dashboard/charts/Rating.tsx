@@ -5,14 +5,14 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { useDashboardAnalytics } from "../../../../hooks/dashboard/dashboard";
+import { useDashboardAnalyticsForCandidate } from "../../../../hooks/dashboard/dashboard";
 
 export default function Rating({
   isAnimationActive = true,
 }: {
   isAnimationActive?: boolean;
 }) {
-  const { data: analytics, isLoading } = useDashboardAnalytics();
+  const { data: analytics, isLoading } = useDashboardAnalyticsForCandidate();
 
   const offered = analytics?.offeredApplicants ?? 0;
   const successRate = analytics?.successRate ?? 0;

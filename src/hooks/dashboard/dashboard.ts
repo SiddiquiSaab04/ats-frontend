@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getDashboardStats } from "../../api/dashboard/stats";
-import { getAnalyticsForCandidate } from "../../api/dashboard/analytics";
+import { getAnalyticsForCandidate, getAnalyticsForRecruiter, getAnalyticsForAdmin } from "../../api/dashboard/analytics";
 import type { dashboardStats , dashboardAnalytics } from "../../interfaces/dashboard";
 
 const useDashboardStats = () => {
@@ -10,11 +10,25 @@ const useDashboardStats = () => {
     });
 };
 
-const useDashboardAnalytics = () => {
+const useDashboardAnalyticsForCandidate = () => {
     return useQuery<dashboardAnalytics>({
-        queryKey: ["dashboardAnalytics"],
+        queryKey: ["dashboardAnalyticsForCandidate"],
         queryFn: () => getAnalyticsForCandidate(),
     });
 };
 
-export { useDashboardStats, useDashboardAnalytics };
+const useDashboardAnalyticsForRecruiter = () => {
+    return useQuery<dashboardAnalytics>({
+        queryKey: ["dashboardAnalyticsForRecruiter"],
+        queryFn: () => getAnalyticsForRecruiter(),
+    });
+};
+
+const useDashboardAnalyticsForAdmin = () => {
+    return useQuery<dashboardAnalytics>({
+        queryKey: ["dashboardAnalyticsForAdmin"],
+        queryFn: () => getAnalyticsForAdmin(),
+    });
+};
+
+export { useDashboardStats, useDashboardAnalyticsForCandidate, useDashboardAnalyticsForRecruiter, useDashboardAnalyticsForAdmin };

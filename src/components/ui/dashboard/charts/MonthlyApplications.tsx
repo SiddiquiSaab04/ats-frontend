@@ -9,11 +9,11 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-import { useDashboardAnalytics } from "../../../../hooks/dashboard/dashboard";
+import { useDashboardAnalyticsForCandidate } from "../../../../hooks/dashboard/dashboard";
 import type { totalApplications } from "../../../../interfaces/dashboard";
 
 const MonthlyApplications = () => {
-  const { data: monthlyAnalytics, isLoading } = useDashboardAnalytics();
+  const { data: monthlyAnalytics, isLoading } = useDashboardAnalyticsForCandidate();
 
   const data =
     monthlyAnalytics?.totalApplications.map((item: totalApplications) => ({

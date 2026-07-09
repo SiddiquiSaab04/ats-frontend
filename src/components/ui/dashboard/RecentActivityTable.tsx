@@ -1,10 +1,10 @@
 import React from "react";
 import Table from "../../reusable/tables/Table";
-import { useDashboardAnalytics } from "../../../hooks/dashboard/dashboard";
+import { useDashboardAnalyticsForCandidate } from "../../../hooks/dashboard/dashboard";
 import type { recentActivity } from "../../../interfaces/dashboard";
 
 const RecentActivity: React.FC = () => {
-  const { data: analytics, isLoading } = useDashboardAnalytics();
+  const { data: analytics, isLoading } = useDashboardAnalyticsForCandidate();
   
   const activities = analytics?.recentActivity ?? [];
 
