@@ -12,7 +12,7 @@ const ApplicationTable: React.FC = () => {
             columns={[
                 {
                     name: "Title",
-                    selector: (row: Application) => row.userName,
+                    selector: (row: Application) => <span className="font-medium"> {row.userName}</span>,
                 },
                 {
                     name: "Location",
