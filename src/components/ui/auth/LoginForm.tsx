@@ -48,7 +48,7 @@ interface LoginFormProps {
       <GenericForm
         fields={fields}
         onSubmit={(data) => onSubmit(data as Login)}
-        submitLabel={isLoading ? "Signing in..." : "Sign In"}
+        submitLabel={isLoading ? "Logging in..." : "Login In"}
         submitButtonClassName="w-full py-3.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-500/20 active:scale-[0.98] shadow-lg shadow-indigo-500/10"
       />
     </div>
