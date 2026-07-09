@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { getDashboardStats } from "../../api/dashboard/stats";
-import { getAnalytics } from "../../api/dashboard/analytics";
+import { getAnalyticsForCandidate } from "../../api/dashboard/analytics";
 import type { dashboardStats , dashboardAnalytics } from "../../interfaces/dashboard";
 
 const useDashboardStats = () => {
@@ -13,7 +13,7 @@ const useDashboardStats = () => {
 const useDashboardAnalytics = () => {
     return useQuery<dashboardAnalytics>({
         queryKey: ["dashboardAnalytics"],
-        queryFn: () => getAnalytics(),
+        queryFn: () => getAnalyticsForCandidate(),
     });
 };
 
