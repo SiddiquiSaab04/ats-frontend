@@ -1,12 +1,12 @@
 import React from "react";
 import Template from "../components/layouts/template/Template";
-import ApplicationTable from "../components/ui/application/ApplicationTable";
-const ApplicationPage: React.FC = () => {
+import UserTable from "../components/ui/user/UserTable";
+const UserPage: React.FC = () => {
     return (
         <Template>
-            <ApplicationTable />
+            <UserTable />
         </Template>
     );
 };
 
-export default ApplicationPage;
+export default UserPage;

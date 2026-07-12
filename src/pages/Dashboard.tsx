@@ -2,7 +2,7 @@ import React from "react";
 import Template from "../components/layouts/template/Template";
 import StatsCard from "../components/ui/dashboard/Stats";
 import Chart from "../components/ui/dashboard/charts/Chart";
-import DashboardTable from "../components/ui/dashboard/dashboardTable";
+import DashboardTable from "../components/ui/dashboard/DashboardTable";
 import { useDashboardAnalytics } from "../hooks/dashboard/dashboard";
 import type { AnalyticsItem } from "../interfaces/dashboard";
 import type { RootState } from "../store/store";
