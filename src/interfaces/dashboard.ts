@@ -1,12 +1,6 @@
 export interface dashboardStats {
-    TOTAL_APPLICATIONS: number;
-    APPLIED: number;
-    SHORTLISTED: number;
-    REJECTED: number;
-    INTERVIEW: number;
-    OFFERED: number;
-    ACCEPTED: number;
-    DECLINED: number;
+    title:string;
+    value:number | string;
 }
 export type totalApplications = {
     month:string;
@@ -20,9 +14,9 @@ export type recentActivity = {
     appliedAt:string;
 }
 
-export interface dashboardAnalytics {
-    totalApplications: totalApplications[]
-    offeredApplicants:number;
-    successRate:number;
-    recentActivity:recentActivity[]
+export interface AnalyticsItem {
+    title: string;
+    value: any;
 }
+
+export type dashboardAnalytics = AnalyticsItem[];
