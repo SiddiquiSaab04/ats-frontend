@@ -6,6 +6,7 @@ import ProtectedRoutes from "./protectedRoutes";
 import Signup from "../pages/Signup";
 import Job from "../pages/Job";
 import Application from "../pages/Application";
+import User from "../pages/User";
 const Router = createBrowserRouter([
   
   {
@@ -15,7 +16,8 @@ const Router = createBrowserRouter([
       { index: true, element: <Dashboard /> },
       { path: "dashboard", element: <Dashboard /> },
       { path: "jobs", element: <Job /> },
-      {path:"applications",element:<Application/>}
+      {path:"applications",element:<Application/>},
+      {path:"users",element:<User/>}
     ],
   },
   {
