@@ -1,9 +1,10 @@
-import { LayoutDashboard, SettingsIcon, Briefcase } from "lucide-react";
+import { LayoutDashboard, SettingsIcon, Briefcase, Users } from "lucide-react";
 
 export const MenuIcons = {
   layoutDashboard: <LayoutDashboard size={20} strokeWidth="1.5" />,
   briefcase: <Briefcase size={20} strokeWidth="1.5" />,
   applicantLeads: <Briefcase size={20} strokeWidth="1.5" />,
+  users: <Users size={20} strokeWidth="1.5" />,
   settings: <SettingsIcon size={20} strokeWidth="1.5" />,
 
 };  
